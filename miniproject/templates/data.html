@@ -1,0 +1,318 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <style>
+       
+            .styled-table {
+                border-collapse: collapse;
+                margin: 25px 0;
+                font-size: 0.9em;
+                font-family: sans-serif;
+                min-width: 400px;
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+                    background-color: #f3f3f3;
+                    margin-left: auto; 
+                    margin-right: auto;
+                  
+            }
+            
+            .styled-table thead tr {
+                background-color: #1cbdc981;
+                color: #ffffff;
+                text-align: left;
+            }
+            .styled-table th,
+            .styled-table td {
+                padding: 12px 15px;
+                
+            }
+            .styled-table tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+           
+            .m1,.m2,.m3,.m4{
+                margin-top: 0px;
+                margin-left: 150px;
+                margin-right: 90px;
+                background: #e7e7e7;
+                width:1200px;
+              
+                
+            }
+            .img{
+                height: 570px;
+                width: 1000px;
+            }
+            .p1{
+                font-size: 26px;
+                font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
+                padding-left: 90px;
+                padding-right: 90px;
+                text-align: justify;
+                padding-bottom: 30px;
+             
+        }
+
+            footer{
+                margin-top: 20px;
+                
+            }
+        </style>
+    </head>
+    <body>
+    {% include "head.html" %}
+    <div class="m1">
+        <h1 style="color: rgba(41, 41, 41, 1);">Few Data from the Data set used</h1>
+        <img src="\static\images\dataset.jpeg" class="img">
+        <p class="p1" style="color: rgba(41, 41, 41, 1);">The Dataset contains 11 columns which include airlines, Date_of_journey, Source, Destination, Route, Dep_time, Arrival_time, Duration, Additonal_info and Price.</p>
+     </div>
+     <div class="m2">
+        <h1 style="color: rgba(41, 41, 41, 1);"><br>INFORMATION OF DATASET<br><br>Data columns (total 11 columns):</h1>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Column</th>
+                <th>Non-Null Count </th>
+                <th>Dtype</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>Airline</td>
+                <td>13354 non-null</td>
+                <td>object</td>
+            </tr>
+            <tr >
+                <td>1</td>   
+                <td>Date_of_Journey</td>  
+                <td>13354 non-null</td>  
+                <td>object</td>
+            </tr>
+            <tr >
+                <td>2</td>   
+                <td>Source</td>  
+                <td>13354 non-null</td>  
+                <td>object</td>
+            </tr>
+            <tr >
+                <td>3</td>   
+                <td>Destination</td>  
+                <td>13354 non-null</td>  
+                <td>object</td>
+            </tr>
+            <tr >
+                <td>4</td>   
+                <td>Route </td>  
+                <td>13354 non-null</td>  
+                <td>object</td>
+            </tr>
+            <tr >
+                <td>5</td>   
+                <td>Dep_Time</td>  
+                <td>13354 non-null</td>  
+                <td>object</td>
+            </tr>
+            <tr >
+                <td>6</td>   
+                <td>Arrival_Time </td>  
+                <td>13354 non-null</td>  
+                <td>object</td>
+            </tr>
+            <tr >
+                <td>7</td>   
+                <td>Duration</td>  
+                <td>13354 non-null</td>  
+                <td>object</td>
+            </tr>
+            <tr >
+                <td>8</td>   
+                <td>Total_Stops</td>  
+                <td>13354 non-null</td>  
+                <td>object</td>
+            </tr>
+            <tr >
+                <td>9</td>   
+                <td>Additional_Info</td>  
+                <td>13354 non-null</td>  
+                <td>object</td>
+            </tr>
+            <tr >
+                <td>10</td>   
+                <td> Price</td>  
+                <td>10683 non-null</td>  
+                <td>float64</td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="p1" style="color: rgba(41, 41, 41, 1);">dtypes: float64(1), object(10)<br><br>Number of Rows- 13354<br><br>Number of Features- 11<br><br>categorical Feature- 10<br><br>Target feature- 1<br><br>Size of test set: 2671 records</p>
+ 
+    </div>
+    <div class="m3">
+        <h1 style="color: rgba(41, 41, 41, 1);"><br>Null Values</h1>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Column</th>
+                    <th>Null Count </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0</td>
+                    <td>Airline</td>
+                    <td>0</td>
+                   
+                </tr>
+                <tr >
+                    <td>1</td>   
+                    <td>Date_of_Journey</td>  
+                    <td>0</td>  
+                  
+                </tr>
+                <tr >
+                    <td>2</td>   
+                    <td>Source</td>  
+                    <td>0</td>  
+                    
+                </tr>
+                <tr >
+                    <td>3</td>   
+                    <td>Destination</td>  
+                    <td>0</td>  
+                 
+                </tr>
+                <tr >
+                    <td>4</td>   
+                    <td>Route </td>  
+                    <td>1</td>  
+                 
+                </tr>
+                <tr >
+                    <td>5</td>   
+                    <td>Dep_Time</td>  
+                    <td>0</td>  
+                   
+                </tr>
+                <tr >
+                    <td>6</td>   
+                    <td>Arrival_Time </td>  
+                    <td>0</td>  
+                   
+                </tr>
+                <tr >
+                    <td>7</td>   
+                    <td>Duration</td>  
+                    <td>0</td>  
+                   
+                </tr>
+                <tr >
+                    <td>8</td>   
+                    <td>Total_Stops</td>  
+                    <td>l</td>  
+                    
+                </tr>
+                <tr >
+                    <td>9</td>   
+                    <td>Additional_Info</td>  
+                    <td>0</td>  
+                  
+                </tr>
+                <tr >
+                    <td>10</td>   
+                    <td> Price</td>  
+                    <td>2671</td>  
+                   
+                </tr>
+            </tbody>
+            </table>
+            <p class="p1" float="center" style="color: rgba(41, 41, 41, 1);">dtypes: int64</p>
+            
+            </div>
+            <div class="m1">
+                <h1 style="color: rgba(41, 41, 41, 1);"> <br>FEATURES</h1>
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Feature Name</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>Airline</td>
+                            <td>The name of the airline</td>
+                           
+                        </tr>
+                        <tr >
+                            <td>1</td>   
+                            <td>Date_of_Journey</td>  
+                            <td>The date of the journey</td>  
+                          
+                        </tr>
+                        <tr >
+                            <td>2</td>   
+                            <td>Source</td>  
+                            <td>The source from which the service begins</td>  
+                            
+                        </tr>
+                        <tr >
+                            <td>3</td>   
+                            <td>Destination</td>  
+                            <td>The destination where the service ends</td>  
+                         
+                        </tr>
+                        <tr >
+                            <td>4</td>   
+                            <td>Route </td>  
+                            <td>The route taken by the flight to reach the destination</td>  
+                         
+                        </tr>
+                        <tr >
+                            <td>5</td>   
+                            <td>Dep_Time</td>  
+                            <td>The time when the journey starts from the source</td>  
+                           
+                        </tr>
+                        <tr >
+                            <td>6</td>   
+                            <td>Arrival_Time </td>  
+                            <td>Time of arrival at the destination</td>  
+                           
+                        </tr>
+                        <tr >
+                            <td>7</td>   
+                            <td>Duration</td>  
+                            <td>Total duration of the flight</td>  
+                           
+                        </tr>
+                        <tr >
+                            <td>8</td>   
+                            <td>Total_Stops</td>  
+                            <td>Total stops between the source and destination</td>  
+                            
+                        </tr>
+                        <tr >
+                            <td>9</td>   
+                            <td>Additional_Info</td>  
+                            <td>Additional information about the flight</td>  
+                          
+                        </tr>
+                        <tr >
+                            <td>10</td>   
+                            <td> Price</td>  
+                            <td>The price of the ticket</td>  
+                           
+                        </tr>
+                    </tbody>
+                    </table>
+                    <p class="p1"  style="color: rgba(41, 41, 41, 1);"><br>These are the total 11 features used in ML models.</p>
+             </div>
+
+    {% include "foo.html" %}
+</body>
+</html>

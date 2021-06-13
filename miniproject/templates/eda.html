@@ -1,0 +1,107 @@
+{% load static %}
+<html lang="en">
+    {% include "head.html" %}
+    <head>
+        <title>EDA</title>
+        <style>
+            .accordion {
+            background-color: rgba(14, 14, 14, 0.5);
+            color: #03e9f4;
+            cursor: pointer;
+            padding: 18px;
+            width: 300px;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+          }
+          
+          .active, .accordion:hover {
+                background: #03e9f4;
+                color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 5px #03e9f4,
+                            0 0 25px #03e9f4,
+                            0 0 50px #03e9f4,
+                            0 0 100px #03e9f4;
+          }
+          .img{
+            height: 700px;;
+          }
+          .panel {
+            padding: 0 18px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+          }
+          footer{
+            width:100%;
+            background: rgba(14, 14, 14, 0.7);
+            margin-top: 200px;
+            height:35px;
+            color: ivory;
+            margin-bottom: 0px;
+            font-size: 15px;
+          }
+          #p2{
+            font-size: 30px;
+          }
+          </style>
+          </head>
+          <body>
+          
+          <h2 style=" color: #fff;">Exploratory Data Analysis</h2>
+          
+          
+          <button class="accordion">Correlation</button>
+          <div class="panel">
+            <img src="\static\images\corelation.jpeg" class="img">
+            <p id="p2"> This graph shows the Correlation between the features. How one attribute is correlated to other.</p>
+          </div>
+          
+          <button class="accordion">Feature Importance</button>
+          <div class="panel">
+            <img src="\static\images\feature_imp.jpeg" class="img">
+             <p id="p2">This graph shows the feature importance of the features. Total stop has highly imporant.</p>
+          </div>
+          
+          <button class="accordion">Null value</button>
+          <div class="panel">
+            <img src="\static\images\null.jpeg" class="img">
+              <p id="p2">This graph shows the Null values in Dataset.</p>
+          </div>
+
+          <button class="accordion">outliers</button>
+
+          <div class="panel">
+            <img src="\static\images\outlier1.jpeg" class="img">
+            <img src="\static\images\outlier2.jpeg" class="img">
+            <img src="\static\images\outlier3.jpeg" class="img">
+            <img src="\static\images\outlier4.jpeg" class="img">
+            
+              <p id="p2">This graph shows the Outlier is present or not in our Dataset. </p>
+          </div>
+          
+          <script>
+          var acc = document.getElementsByClassName("accordion");
+          var i;
+          
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+              } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+              } 
+            });
+          }
+          </script>
+          {% include "foo.html" %}
+          </body>
+</html>

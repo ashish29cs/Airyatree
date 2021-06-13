@@ -1,0 +1,50 @@
+{% load static %}
+<html lang="en">
+    {% include "head.html" %}
+<head>
+    <title>contact us</title>
+    <style>
+     .dep,.loc{
+         float: left;
+         font-size: 30px;
+         padding-left: 30px ;
+         margin-left: 180px;
+         margin-top: 50px;
+         text-decoration-thickness: 6px ;
+         color: ivory;
+         text-align: justify;
+     }
+     .map
+     {
+        margin-right: 170px;
+        margin-left: 160px;
+     }
+       
+    </style>
+</head>
+<body>
+    <div class="dep">
+        <p><b>Ankit Kumar</b><br>
+        Student
+        <br>4th SEM
+        <br>RV College of Engineering&reg;
+        <br>Phone: 7004694312
+        <br>Email: ankitkrsingh80@gmail.com</p>
+        <br><br>
+    </div>
+    <div class="loc" >
+       
+            <p><b>Ashish Bhardwaj</b><br>
+            Student
+            <br>4th SEM
+            <br>RV College of Engineering&reg;
+            <br>Phone: 8171270851
+            <br>Email: ashish29.cs@gmail.com</p>
+            <br><br>
+            </div>
+
+  <div class="map"><iframe frameborder="0" height="350px" scrolling="no" src="https://maps.google.com/?ie=UTF8&amp;ll=12.923633,77.499619&amp;spn=0.010373,0.013797&amp;t=h&amp;z=16&amp;output=embed" width="100%"></iframe></div>  
+
+{% include "foo.html" %}
+</body>
+</html>

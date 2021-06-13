@@ -1,0 +1,35 @@
+{% load static %}
+<html lang="en">
+    <head>
+        <style>
+            .d1{
+                margin-top: 40px;
+                margin-left: 150px;
+                margin-right: 90px;
+                width:1200px;
+                height: 400px;
+                font-size: 30px;
+                background: rgba(255, 255, 255, 0.6);
+                 
+            }
+            .p1{
+                
+                padding-top: 40px;
+            }
+            footer{
+                margin-top: 230px;
+                padding-top: 60px;
+            }
+        </style>
+    </head>
+    <body>
+    {% include "head.html" %}
+    <div class="d1"> <p class="p1"> Output using Random Forest Regressor is <b>{{prediction_text}}</b></p>
+        <hr>
+      <p class="p1">Output using Decision Tree Regressor is <b>{{prediction_text1}}</b></p>
+      <hr>
+     <p class="p1">Output using KNN Regressor is <b>{{prediction_text2}}</b></p></div>
+   
+    {% include "foo.html" %}
+</body>
+</html>
