@@ -1,4 +1,4 @@
-# Airyatree
+# farefair
 Flight price prediction application.
 
 you can check application on:
